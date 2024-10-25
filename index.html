@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/photo.JPG" alt="Richard hanrick" width="80">
+          <img src="./assets/Photo.png" alt="Richard hanrick" width="80">
         </figure>
 
         <div class="info-content">
@@ -140,7 +140,8 @@
           </li>
           <li class="social-item">
             <a href="" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon> Twitter
+            <a href="https://x.com/Pallavi_Shtgr" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
 
@@ -213,7 +214,7 @@
 
         <section class="about-text">
           <p>
-          I am Rohan Tyagi, a passionate and results-driven software developer with a solid foundation in computer science 
+          I am Pallavi, a passionate and results-driven software developer with a solid foundation in computer science 
           and a keen interest in machine learning and data analysis. With a B.Tech in Computer Science and Engineering, 
           I have honed my skills through hands-on experience and diverse projects.
 
@@ -339,8 +340,8 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">Bachelor of Technology in Computer Science and Engineering</h4>
-              <span>ABES Engineering College</span>
-              <span>2020 — 2024</span>
+              <span>P.A.College of Engineering College , Mangalore</span>
+              <span>2021 — 2025</span>
 
               <p class="timeline-text">
                 Relevant courses included Data Structures and Algorithms, DBMS, Computer Networking, Compiler Design,
@@ -352,8 +353,8 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">Intermediate</h4>
-              <span>Saraswati Bal Mandir Sr. Sec. School</span>
-              <span>2018 — 2019</span>
+              <span>GPUC Kundapura</span>
+              <span>2019 — 2021</span>
 
               <p class="timeline-text">
                 Key Subjects: Physics, Chemistry, Maths, Computer Science
@@ -364,8 +365,8 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">High school of art and design</h4>
-              <span>Saraswati Bal Mandir Sr. Sec. School</span>
-              <span>2016 — 2017</span>
+              <span>Karnataka Public School, Koteshwara</span>
+              <span>2018 — 2019</span>
 
               <p class="timeline-text">
                 Key Subjects: Science, Maths, Information Technology, English
@@ -421,103 +422,58 @@
           </ol>
 
         </section>
-
         <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
+          <h3 class="h3 skills-title">My Skills</h3>
           <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">C, C++</h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data Structure and Algorithms</h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Machine Learning</h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Leardership</h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Problem-Solving</h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Teamwork</h5>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-            
+              <li class="skills-item bubble" onclick="toggleSkills('programming')">Programming Languages</li>
+              <ul class="skills-detail" id="programming">
+                  <li class="skills-item">Python</li>
+                  <li class="skills-item">C</li>
+                  <li class="skills-item">C++</li>
+              </ul>
+              
+              <li class="skills-item bubble" onclick="toggleSkills('frontend')">Frontend Development</li>
+              <ul class="skills-detail" id="frontend">
+                  <li class="skills-item">HTML</li>
+                  <li class="skills-item">CSS</li>
+                  <li class="skills-item">React.js</li>
+                  <li class="skills-item">Tailwind CSS</li>
+              </ul>
+              
+              <li class="skills-item bubble" onclick="toggleSkills('backend')">Backend Development</li>
+              <ul class="skills-detail" id="backend">
+                  <li class="skills-item">Node.js</li>
+                  <li class="skills-item">Django</li>
+              </ul>
+      
+              <li class="skills-item bubble" onclick="toggleSkills('database')">Database</li>
+              <ul class="skills-detail" id="database">
+                  <li class="skills-item">SQL</li>
+                  <li class="skills-item">MongoDB</li>
+              </ul>
+      
+              <li class="skills-item bubble" onclick="toggleSkills('version-control')">Version Control</li>
+              <ul class="skills-detail" id="version-control">
+                  <li class="skills-item">Git</li>
+              </ul>
+      
+              <li class="skills-item bubble" onclick="toggleSkills('deep-learning')">Deep Learning Frameworks</li>
+              <ul class="skills-detail" id="deep-learning">
+                  <li class="skills-item">TensorFlow</li>
+                  <li class="skills-item">PyTorch</li>
+                  <li class="skills-item">Scikit-learn</li>
+              </ul>
+      
+              <li class="skills-item bubble" onclick="toggleSkills('software')">Software Proficiency</li>
+              <ul class="skills-detail" id="software">
+                  <li class="skills-item">MS Excel</li>
+                  <li class="skills-item">MS PowerPoint</li>
+                  <li class="skills-item">MS Word</li>
+                  <li class="skills-item">MS Outlook</li>
+              </ul>
           </ul>
-
-        </section>
-
-      </article>
-
+      </section>
+      
 
 
 

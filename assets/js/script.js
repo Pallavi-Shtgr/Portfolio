@@ -15,6 +15,14 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
+function toggleSkills(category) {
+  const skillsDetail = document.getElementById(category);
+  if (skillsDetail.style.display === "none" || skillsDetail.style.display === "") {
+      skillsDetail.style.display = "block"; // Show the skills
+  } else {
+      skillsDetail.style.display = "none"; // Hide the skills
+  }
+}
 
 
 

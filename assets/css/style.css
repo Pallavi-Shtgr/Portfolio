@@ -625,14 +625,14 @@
   /**
    * skills 
    */
-  
+/*   
   .skills-title { margin-bottom: 20px; }
   
   .skills-list { 
     padding: 20px; 
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Create two columns */
-    gap: 20px; /* Space between the columns */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
   }
   
   
@@ -662,7 +662,68 @@
     background: var(--text-gradient-yellow);
     height: 100%;
     border-radius: inherit;
-  }
+  } */
+   /* 2nd simple code for skill
+  .skills-title { 
+    margin-bottom: 20px; 
+}
+
+.skills-list { 
+    padding: 20px; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.skills-item {
+    background-color: var(--jet); 
+    color: white;           
+    padding: 15px 20px;         
+    border-radius: 20px;     
+    text-align: center;        
+    font-size: 16px;         
+    transition: background-color 0.3s; 
+}
+
+.skills-item:hover {
+    background-color: var(--text-gradient-yellow);
+} */
+.skills-title {
+  margin-bottom: 20px; 
+}
+
+.skills-list { 
+  padding: 20px; 
+  display: grid;
+  grid-template-columns: 1fr; /* One column for categories */
+  gap: 20px; /* Space between the bubbles */
+}
+
+.skills-item {
+  background-color: var(--jet); /* Background color of the bubble */
+  color: white;                /* Text color */
+  padding: 15px 20px;         /* Padding for bubble size */
+  border-radius: 20px;        /* Rounded edges */
+  text-align: center;         /* Center the text */
+  font-size: 16px;            /* Font size */
+  transition: background-color 0.3s; /* Transition effect */
+  cursor: pointer;            /* Pointer cursor on hover */
+}
+
+.skills-item:hover {
+  background-color: var(--text-gradient-yellow); /* Change on hover */
+}
+
+.skills-detail {
+  display: none; /* Hide by default */
+  padding-left: 20px; /* Indent for sub-items */
+}
+
+.skills-detail .skills-item {
+  background-color: var(--dark-gray); /* Different background for sub-items */
+  margin-bottom: 10px; /* Space between sub-items */
+}
+
+
   
   
   
