@@ -15,14 +15,6 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
-function toggleSkills(category) {
-  const skillsDetail = document.getElementById(category);
-  if (skillsDetail.style.display === "none" || skillsDetail.style.display === "") {
-      skillsDetail.style.display = "block"; // Show the skills
-  } else {
-      skillsDetail.style.display = "none"; // Hide the skills
-  }
-}
 
 
 
@@ -115,6 +107,7 @@ const pages = document.querySelectorAll("[data-page]");
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
+    
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
         pages[i].classList.add("active");
