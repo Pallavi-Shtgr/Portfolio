@@ -628,43 +628,42 @@ main {
  * skills 
  */
 
-.skills-title { margin-bottom: 20px; }
+ .skills-title {
+  margin-bottom: 20px; 
+}
 
 .skills-list { 
   padding: 20px; 
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Create two columns */
-  gap: 20px; /* Space between the columns */
+  grid-template-columns: 1fr; /* One column for categories */
+  gap: 20px; /* Space between the bubbles */
 }
 
-
-.skills-item:not(:last-child) { margin-bottom: 15px; }
-
-.skill .title-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
+.skills-item {
+  background-color: var(--jet); /* Background color of the bubble */
+  color: white;                /* Text color */
+  padding: 15px 20px;         /* Padding for bubble size */
+  border-radius: 20px;        /* Rounded edges */
+  text-align: center;         /* Center the text */
+  font-size: 16px;            /* Font size */
+  transition: background-color 0.3s; /* Transition effect */
+  cursor: pointer;            /* Pointer cursor on hover */
 }
 
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
+.skills-item:hover {
+  background-color: var(--text-gradient-yellow); /* Change on hover */
 }
 
-.skill-progress-bg {
-  background: var(--jet);
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
+.skills-detail {
+  display: none; /* Hide by default */
+  padding-left: 20px; /* Indent for sub-items */
 }
 
-.skill-progress-fill {
-  background: var(--text-gradient-yellow);
-  height: 100%;
-  border-radius: inherit;
+.skills-detail .skills-item {
+  background-color: var(--dark-gray); /* Different background for sub-items */
+  margin-bottom: 10px; /* Space between sub-items */
 }
+
 
 
 

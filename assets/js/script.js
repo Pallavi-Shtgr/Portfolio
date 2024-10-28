@@ -96,6 +96,19 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
+// Function to toggle visibility of skills sub-lists
+function toggleSkills(categoryId) {
+  // Select the relevant sub-list by ID
+  const skillsDetail = document.getElementById(categoryId);
+
+  // Toggle the display of the selected skills-detail
+  if (skillsDetail.style.display === "block") {
+    skillsDetail.style.display = "none"; // Hide if already visible
+  } else {
+    skillsDetail.style.display = "block"; // Show if hidden
+  }
+}
+
 
 
 
