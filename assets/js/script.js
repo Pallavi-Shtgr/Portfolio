@@ -1,11 +1,7 @@
 'use strict';
 
 
-
-// element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
@@ -134,3 +130,35 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+// JavaScript to create typewriter effect
+const roles = ["software engineer", "student", "developer", "artist", "photographer"];
+let index = 0;
+let charIndex = 0;
+const typingSpeed = 100;
+const pauseTime = 1500;
+const typingElement = document.querySelector(".typing-text");
+
+function type() {
+  if (charIndex < roles[index].length) {
+    typingElement.textContent += roles[index].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingSpeed);
+  } else {
+    setTimeout(erase, pauseTime);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typingElement.textContent = roles[index].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, typingSpeed / 2);
+  } else {
+    index = (index + 1) % roles.length;
+    setTimeout(type, typingSpeed);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", type);

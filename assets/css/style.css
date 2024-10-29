@@ -1685,3 +1685,16 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* Styling for typewriter effect */
+.typing-text {
+  font-weight: bold;
+  border-right: 2px solid black;
+  padding-right: 5px;
+  animation: blink 0.7s step-end infinite alternate;
+}
+
+@keyframes blink {
+  from { border-color: transparent; }
+  to { border-color: black; }
+}
