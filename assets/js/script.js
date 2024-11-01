@@ -73,41 +73,18 @@ for (let i = 0; i < filterBtn.length; i++) {
 }
 
 
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-// Function to toggle visibility of skills sub-lists
-function toggleSkills(categoryId) {
-  // Select the relevant sub-list by ID
-  const skillsDetail = document.getElementById(categoryId);
-
-  // Toggle the display of the selected skills-detail
-  if (skillsDetail.style.display === "block") {
-    skillsDetail.style.display = "none"; // Hide if already visible
-  } else {
-    skillsDetail.style.display = "block"; // Show if hidden
+    // Function to toggle visibility of skills sub-lists
+    function toggleSkills(categoryId) {
+      // Select the relevant sub-list by ID
+      const skillsDetail = document.getElementById(categoryId);
+      // Toggle the display of the selected skills-detail
+      if (skillsDetail.style.display === "block") {
+          skillsDetail.style.display = "none"; // Hide if already visible
+      } else {
+          skillsDetail.style.display = "block"; // Show if hidden
+      }
   }
-}
-
-
-
-
+  
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
@@ -130,6 +107,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+// Function to toggle visibility of skills sub-lists
+function toggleSkills(categoryId) {
+  // Select the relevant sub-list by ID
+  const skillsDetail = document.getElementById(categoryId);
+  // Toggle the display of the selected skills-detail
+  if (skillsDetail.style.display === "block") {
+      skillsDetail.style.display = "none"; // Hide if already visible
+  } else {
+      skillsDetail.style.display = "block"; // Show if hidden
+  }
+}
+
 
 
 // JavaScript to create typewriter effect
@@ -162,3 +151,4 @@ function erase() {
 }
 
 document.addEventListener("DOMContentLoaded", type);
+

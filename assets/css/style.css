@@ -627,42 +627,70 @@ main {
 /**
  * skills 
  */
-
  .skills-title {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  color: white;
 }
 
-.skills-list { 
-  padding: 20px; 
+.skills-list {
+  padding: 20px;
   display: grid;
-  grid-template-columns: 1fr; /* One column for categories */
-  gap: 20px; /* Space between the bubbles */
+  grid-template-columns: 1fr; /* Single column for main items */
+  gap: 10px; /* Space between the main skill bubbles */
 }
 
 .skills-item {
-  background-color: var(--jet); /* Background color of the bubble */
-  color: white;                /* Text color */
-  padding: 15px 20px;         /* Padding for bubble size */
-  border-radius: 20px;        /* Rounded edges */
-  text-align: center;         /* Center the text */
-  font-size: 16px;            /* Font size */
-  transition: background-color 0.3s; /* Transition effect */
-  cursor: pointer;            /* Pointer cursor on hover */
+  background-color: var(--jet);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for animation */
 }
 
 .skills-item:hover {
-  background-color: var(--text-gradient-yellow); /* Change on hover */
+  background-color: var(--text-gradient-yellow);
+  transform: scale(1.05); /* Scale up on hover */
 }
 
 .skills-detail {
-  display: none; /* Hide by default */
-  padding-left: 20px; /* Indent for sub-items */
+  display: none; /* Hide the detailed skill list by default */
+}
+
+.skills-detail-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+  gap: 10px;
+  padding: 10px 20px;
 }
 
 .skills-detail .skills-item {
-  background-color: var(--dark-gray); /* Different background for sub-items */
-  margin-bottom: 10px; /* Space between sub-items */
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  color: rgb(215, 209, 209);
+  text-align: center;
+  border-radius: 20px; /* Rounded edges for bubble effect */
+  padding: 6px; /* Increased padding for bubble size */
+  margin-bottom: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Light border for better visibility */
+  transition: transform 0.2s, background-color 0.3s; /* Added animation for hover */
+  display: flex; /* Flexbox for equal height */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  height: 40px; /* Set a fixed height for all items */
 }
+
+.skills-detail .skills-item:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Center single items in the middle */
+.skills-detail .skills-item:nth-child(1):only-child {
+  margin: 0 auto; /* Center if it's the only item */
+}
+
 
 
 
