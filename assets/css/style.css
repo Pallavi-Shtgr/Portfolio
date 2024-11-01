@@ -1350,33 +1350,65 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * #CONTACT
    */
-
-  .mapbox {
-    height: 380px;
-    border-radius: 18px;
-  }
-
-  .input-wrapper {
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-
-  .form-input { padding: 15px 20px; }
-
-  textarea.form-input { margin-bottom: 30px; }
-
-  .form-btn {
-    --fs-6: 16px;
-    padding: 16px 20px;
-  }
-
-  .form-btn ion-icon { font-size: 18px; }
-
+   .mapbox {
+    height: 380px; /* Fixed height for the map container */
+    border-radius: 18px; /* Rounded corners for the map */
+    overflow: hidden; /* Ensures that content does not overflow */
+    background-color: #333; /* Placeholder background */
 }
 
+.input-wrapper {
+    display: flex; /* Use flexbox for input alignment */
+    gap: 30px; /* Space between inputs */
+    margin-bottom: 30px; /* Bottom margin for spacing */
+}
 
+.form-input {
+    padding: 15px 20px; /* Padding for input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #333; /* Dark background for inputs */
+    color: #fff; /* White text */
+}
 
+textarea.form-input {
+    margin-bottom: 30px; /* Bottom margin for the textarea */
+    resize: vertical; /* Allow vertical resizing only */
+}
 
+.form-btn {
+    padding: 16px 20px; /* Padding for button */
+    background-color: #28a745; /* Green button background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-btn ion-icon {
+    font-size: 18px; /* Icon size */
+}
+
+.form-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .input-wrapper {
+        flex-direction: column; /* Stack inputs on small screens */
+        gap: 15px; /* Reduced gap */
+    }
+
+    .form-btn {
+        width: 100%; /* Full width button on small screens */
+    }
+}
 
 /**
  * responsive larger than 768px screen
@@ -1724,5 +1756,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 @keyframes blink {
   from { border-color: transparent; }
-  to { border-color: black; }
+  to { border-color: black; } /* Corrected 'to' property */
+}
 }
