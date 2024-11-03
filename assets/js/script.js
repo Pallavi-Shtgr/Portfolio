@@ -123,3 +123,5 @@ formInputs.forEach(input => {
         submitButton.disabled = !allFilled; // Enable or disable the button
     });
 });
+
+
