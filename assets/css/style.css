@@ -1759,3 +1759,24 @@ textarea.form-input {
   to { border-color: black; } /* Corrected 'to' property */
 }
 }
+
+.resume-download {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.download-button:hover {
+  background-color: #555;
+}
+
