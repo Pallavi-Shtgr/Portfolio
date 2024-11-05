@@ -125,3 +125,34 @@ formInputs.forEach(input => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all filter buttons and project items
+  const filterButtons = document.querySelectorAll(".filter-item button");
+  const projectItems = document.querySelectorAll(".project-item");
+
+  // Add event listener to each filter button
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove the 'active' class from all buttons and add it to the clicked button
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Get the selected filter category from the button's text
+      const filterCategory = button.textContent.toLowerCase();
+
+      // Show or hide project items based on the filter category
+      projectItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category").toLowerCase();
+
+        // If "All" is selected, show all items; otherwise, show only matching items
+        if (filterCategory === "all" || itemCategory.includes(filterCategory)) {
+          item.classList.add("active");
+          item.style.display = "block";
+        } else {
+          item.classList.remove("active");
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+});
