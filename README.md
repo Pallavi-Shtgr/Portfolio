@@ -38,7 +38,7 @@ Ensure you have a modern browser to view the portfolio correctly.
 - Edit `script.js` to add/remove functionalities.
 
 ## Contact
-If you have any suggestions or questions, feel free to contact me at **your-email@example.com**.
+If you have any suggestions or questions, feel free to contact me at **pallavishettigar03@gmail.com*.
 
 ## License
 This project is open-source and available under the **MIT License**.
