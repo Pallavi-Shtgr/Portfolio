@@ -627,70 +627,77 @@ main {
 /**
  * skills 
  */
- .skills-title {
-  margin-bottom: 20px;
+.skills-section {
+  padding: 40px;
+  background-color: #121212;
   color: white;
 }
 
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.skills-list-column,
+.skills-details-column {
+  flex: 1 1 300px;
+}
+
+.skills-title,
+.skills-active-title {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 24px;
+}
+
 .skills-list {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr; /* Single column for main items */
-  gap: 10px; /* Space between the main skill bubbles */
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .skills-item {
   background-color: var(--jet);
   color: white;
-  padding: 15px 20px;
+  padding: 15px;
   border-radius: 20px;
   text-align: center;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; /* Added transform for animation */
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .skills-item:hover {
   background-color: var(--text-gradient-yellow);
-  transform: scale(1.05); /* Scale up on hover */
+  transform: scale(1.05);
 }
 
 .skills-detail {
-  display: none; /* Hide the detailed skill list by default */
-}
-
-.skills-detail-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 10px;
-  padding: 10px 20px;
 }
 
 .skills-detail .skills-item {
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
-  color: rgb(215, 209, 209);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ddd;
+  border-radius: 20px;
+  padding: 10px;
   text-align: center;
-  border-radius: 20px; /* Rounded edges for bubble effect */
-  padding: 6px; /* Increased padding for bubble size */
-  margin-bottom: 4px;
-  border: 2px solid rgba(255, 255, 255, 0.2); /* Light border for better visibility */
-  transition: transform 0.2s, background-color 0.3s; /* Added animation for hover */
-  display: flex; /* Flexbox for equal height */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
-  height: 40px; /* Set a fixed height for all items */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .skills-detail .skills-item:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
-  transform: scale(1.05); /* Scale effect on hover */
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
 }
-
-/* Center single items in the middle */
-.skills-detail .skills-item:nth-child(1):only-child {
-  margin: 0 auto; /* Center if it's the only item */
-}
-
 
 
 
