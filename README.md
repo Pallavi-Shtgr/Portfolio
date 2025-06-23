@@ -3,7 +3,7 @@
 This is a personal portfolio website built using **HTML, CSS, and JavaScript**. The website showcases my skills, projects, and contact information.
 ------------------------------------------------------------------------------------------------------------------------------
 
-Click here : https://pallavishettigar.netlify.app/
+Click here to view : https://pallavishettigar.netlify.app/
 
 ## Features
 
