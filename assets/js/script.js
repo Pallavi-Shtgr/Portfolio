@@ -82,7 +82,7 @@ navigationLinks.forEach((navLink, index) => {
 });
 
 // Typewriter effect
-const roles = ["software engineer", "student", "developer", "artist", "photographer"];
+const roles = ["software engineer", "developer", "artist", "photographer"];
 let index = 0;
 let charIndex = 0;
 const typingSpeed = 100;
